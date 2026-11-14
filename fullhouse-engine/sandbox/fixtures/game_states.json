@@ -1,0 +1,768 @@
+[
+  {
+    "type": "action_request",
+    "hand_id": "fix_0",
+    "street": "preflop",
+    "seat_to_act": 3,
+    "pot": 150,
+    "community_cards": [],
+    "current_bet": 100,
+    "min_raise_to": 200,
+    "amount_owed": 100,
+    "can_check": false,
+    "your_cards": [
+      "3h",
+      "Js"
+    ],
+    "your_stack": 10000,
+    "your_bet_this_street": 0,
+    "players": [
+      {
+        "seat": 0,
+        "bot_id": "bot_0",
+        "stack": 10000,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 1,
+        "bot_id": "bot_1",
+        "stack": 9950,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 50,
+        "hole_cards": null
+      },
+      {
+        "seat": 2,
+        "bot_id": "bot_2",
+        "stack": 9900,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 100,
+        "hole_cards": null
+      },
+      {
+        "seat": 3,
+        "bot_id": "bot_3",
+        "stack": 10000,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 4,
+        "bot_id": "bot_4",
+        "stack": 10000,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 5,
+        "bot_id": "bot_5",
+        "stack": 10000,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      }
+    ],
+    "action_log": [
+      {
+        "seat": 1,
+        "action": "small_blind",
+        "amount": 50
+      },
+      {
+        "seat": 2,
+        "action": "big_blind",
+        "amount": 100
+      }
+    ],
+    "match_action_log": []
+  },
+  {
+    "type": "action_request",
+    "hand_id": "fix_0",
+    "street": "flop",
+    "seat_to_act": 2,
+    "pot": 850,
+    "community_cards": [
+      "3s",
+      "Tc",
+      "7s"
+    ],
+    "current_bet": 0,
+    "min_raise_to": 100,
+    "amount_owed": 0,
+    "can_check": true,
+    "your_cards": [
+      "Jd",
+      "3c"
+    ],
+    "your_stack": 9600,
+    "your_bet_this_street": 0,
+    "players": [
+      {
+        "seat": 0,
+        "bot_id": "bot_0",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 1,
+        "bot_id": "bot_1",
+        "stack": 9950,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 2,
+        "bot_id": "bot_2",
+        "stack": 9600,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 3,
+        "bot_id": "bot_3",
+        "stack": 9600,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 4,
+        "bot_id": "bot_4",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 5,
+        "bot_id": "bot_5",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      }
+    ],
+    "action_log": [
+      {
+        "seat": 1,
+        "action": "small_blind",
+        "amount": 50
+      },
+      {
+        "seat": 2,
+        "action": "big_blind",
+        "amount": 100
+      },
+      {
+        "seat": 3,
+        "action": "raise",
+        "amount": 400
+      },
+      {
+        "seat": 4,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 5,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 0,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 1,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 2,
+        "action": "call",
+        "amount": 300
+      }
+    ],
+    "match_action_log": [
+      {
+        "hand_num": 0,
+        "seat": 3,
+        "bot_id": "bot_3",
+        "action": "raise",
+        "amount": 400
+      },
+      {
+        "hand_num": 0,
+        "seat": 4,
+        "bot_id": "bot_4",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 5,
+        "bot_id": "bot_5",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 0,
+        "bot_id": "bot_0",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 1,
+        "bot_id": "bot_1",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "call",
+        "amount": null
+      }
+    ]
+  },
+  {
+    "type": "action_request",
+    "hand_id": "fix_0",
+    "street": "turn",
+    "seat_to_act": 2,
+    "pot": 850,
+    "community_cards": [
+      "3s",
+      "Tc",
+      "7s",
+      "5d"
+    ],
+    "current_bet": 0,
+    "min_raise_to": 100,
+    "amount_owed": 0,
+    "can_check": true,
+    "your_cards": [
+      "Jd",
+      "3c"
+    ],
+    "your_stack": 9600,
+    "your_bet_this_street": 0,
+    "players": [
+      {
+        "seat": 0,
+        "bot_id": "bot_0",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 1,
+        "bot_id": "bot_1",
+        "stack": 9950,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 2,
+        "bot_id": "bot_2",
+        "stack": 9600,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 3,
+        "bot_id": "bot_3",
+        "stack": 9600,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 4,
+        "bot_id": "bot_4",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 5,
+        "bot_id": "bot_5",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      }
+    ],
+    "action_log": [
+      {
+        "seat": 1,
+        "action": "small_blind",
+        "amount": 50
+      },
+      {
+        "seat": 2,
+        "action": "big_blind",
+        "amount": 100
+      },
+      {
+        "seat": 3,
+        "action": "raise",
+        "amount": 400
+      },
+      {
+        "seat": 4,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 5,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 0,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 1,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 2,
+        "action": "call",
+        "amount": 300
+      },
+      {
+        "seat": 2,
+        "action": "check",
+        "amount": 0
+      },
+      {
+        "seat": 3,
+        "action": "check",
+        "amount": 0
+      }
+    ],
+    "match_action_log": [
+      {
+        "hand_num": 0,
+        "seat": 3,
+        "bot_id": "bot_3",
+        "action": "raise",
+        "amount": 400
+      },
+      {
+        "hand_num": 0,
+        "seat": 4,
+        "bot_id": "bot_4",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 5,
+        "bot_id": "bot_5",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 0,
+        "bot_id": "bot_0",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 1,
+        "bot_id": "bot_1",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "call",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "check",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 3,
+        "bot_id": "bot_3",
+        "action": "check",
+        "amount": null
+      }
+    ]
+  },
+  {
+    "type": "action_request",
+    "hand_id": "fix_0",
+    "street": "river",
+    "seat_to_act": 2,
+    "pot": 850,
+    "community_cards": [
+      "3s",
+      "Tc",
+      "7s",
+      "5d",
+      "Ac"
+    ],
+    "current_bet": 0,
+    "min_raise_to": 100,
+    "amount_owed": 0,
+    "can_check": true,
+    "your_cards": [
+      "Jd",
+      "3c"
+    ],
+    "your_stack": 9600,
+    "your_bet_this_street": 0,
+    "players": [
+      {
+        "seat": 0,
+        "bot_id": "bot_0",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 1,
+        "bot_id": "bot_1",
+        "stack": 9950,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 2,
+        "bot_id": "bot_2",
+        "stack": 9600,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 3,
+        "bot_id": "bot_3",
+        "stack": 9600,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 4,
+        "bot_id": "bot_4",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      },
+      {
+        "seat": 5,
+        "bot_id": "bot_5",
+        "stack": 10000,
+        "state": "folded",
+        "is_folded": true,
+        "is_all_in": false,
+        "bet_this_street": 0,
+        "hole_cards": null
+      }
+    ],
+    "action_log": [
+      {
+        "seat": 1,
+        "action": "small_blind",
+        "amount": 50
+      },
+      {
+        "seat": 2,
+        "action": "big_blind",
+        "amount": 100
+      },
+      {
+        "seat": 3,
+        "action": "raise",
+        "amount": 400
+      },
+      {
+        "seat": 4,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 5,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 0,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 1,
+        "action": "fold",
+        "amount": 0
+      },
+      {
+        "seat": 2,
+        "action": "call",
+        "amount": 300
+      },
+      {
+        "seat": 2,
+        "action": "check",
+        "amount": 0
+      },
+      {
+        "seat": 3,
+        "action": "check",
+        "amount": 0
+      },
+      {
+        "seat": 2,
+        "action": "check",
+        "amount": 0
+      },
+      {
+        "seat": 3,
+        "action": "check",
+        "amount": 0
+      }
+    ],
+    "match_action_log": [
+      {
+        "hand_num": 0,
+        "seat": 3,
+        "bot_id": "bot_3",
+        "action": "raise",
+        "amount": 400
+      },
+      {
+        "hand_num": 0,
+        "seat": 4,
+        "bot_id": "bot_4",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 5,
+        "bot_id": "bot_5",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 0,
+        "bot_id": "bot_0",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 1,
+        "bot_id": "bot_1",
+        "action": "fold",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "call",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "check",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 3,
+        "bot_id": "bot_3",
+        "action": "check",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "check",
+        "amount": null
+      },
+      {
+        "hand_num": 0,
+        "seat": 3,
+        "bot_id": "bot_3",
+        "action": "check",
+        "amount": null
+      }
+    ]
+  },
+  {
+    "type": "action_request",
+    "hand_id": "fix_1",
+    "street": "preflop",
+    "seat_to_act": 0,
+    "pot": 300,
+    "community_cards": [],
+    "current_bet": 100,
+    "min_raise_to": 200,
+    "amount_owed": 0,
+    "can_check": true,
+    "your_cards": [
+      "Ah",
+      "4h"
+    ],
+    "your_stack": 9900,
+    "your_bet_this_street": 100,
+    "players": [
+      {
+        "seat": 0,
+        "bot_id": "bot_0",
+        "stack": 9900,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 100,
+        "hole_cards": null
+      },
+      {
+        "seat": 1,
+        "bot_id": "bot_1",
+        "stack": 9900,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 100,
+        "hole_cards": null
+      },
+      {
+        "seat": 2,
+        "bot_id": "bot_2",
+        "stack": 9900,
+        "state": "active",
+        "is_folded": false,
+        "is_all_in": false,
+        "bet_this_street": 100,
+        "hole_cards": null
+      }
+    ],
+    "action_log": [
+      {
+        "seat": 2,
+        "action": "small_blind",
+        "amount": 50
+      },
+      {
+        "seat": 0,
+        "action": "big_blind",
+        "amount": 100
+      },
+      {
+        "seat": 1,
+        "action": "call",
+        "amount": 100
+      },
+      {
+        "seat": 2,
+        "action": "call",
+        "amount": 50
+      }
+    ],
+    "match_action_log": [
+      {
+        "hand_num": 1,
+        "seat": 1,
+        "bot_id": "bot_1",
+        "action": "call",
+        "amount": null
+      },
+      {
+        "hand_num": 1,
+        "seat": 2,
+        "bot_id": "bot_2",
+        "action": "call",
+        "amount": null
+      }
+    ]
+  }
+]

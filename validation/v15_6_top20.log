@@ -1,0 +1,8 @@
+v15.6-x3.5 RIO action-flip log (30 field_sim matches, pot>=5000)
+total captured: 1, top 20 by pot:
+
+#1 hand_id=v_15_59 pot=13570 street=turn
+   hero=['Ac', 'Ah']  board=['2d', 'Kh', 'Ks', '3d']
+   hand_class=two_pair rio=0.414 danger 1->2.45  veto_A False->True
+   owed=0 stack=11148
+
