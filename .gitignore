@@ -7,3 +7,13 @@ __pycache__/
 
 # Local Claude Code settings (machine-specific)
 .claude/settings.local.json
+
+# Testbench caches and run outputs (large, regenerated on demand)
+imperial-ai-hack/testbench/_cache/
+imperial-ai-hack/testbench/out/
+
+# Dashboard: local settings (holds the team data token) and downloaded hand data - never commit
+pokerdash/config.json
+pokerdash/data/
+pokerdash/inbox/
+pokerdash_desktop_copy/

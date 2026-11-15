@@ -1,0 +1,317 @@
+{
+ "85p": {
+  "slug": "85p",
+  "hands": 8000,
+  "rounds_used": 8,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "AAST": {
+  "slug": "aast",
+  "hands": 8000,
+  "rounds_used": 8,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "AIl IN": {
+  "slug": "ail_in",
+  "hands": 8000,
+  "rounds_used": 8,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Anker Batteries": {
+  "slug": "anker_batteries",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Anton": {
+  "slug": "anton",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Astra La Vista": {
+  "slug": "astra_la_vista",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Attention Is All In": {
+  "slug": "attention_is_all_in",
+  "hands": 5000,
+  "rounds_used": 5,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Chinese people can fly": {
+  "slug": "chinese_people_can_fly",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Claudebot": {
+  "slug": "claudebot",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Equity Engine": {
+  "slug": "equity_engine",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R19-R54",
+  "kind": "team"
+ },
+ "FisherMen": {
+  "slug": "fishermen",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "GamesGone": {
+  "slug": "gamesgone",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Gherkers": {
+  "slug": "gherkers",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R19-R54",
+  "kind": "team"
+ },
+ "JoCal": {
+  "slug": "jocal",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Joca": {
+  "slug": "joca",
+  "hands": 2000,
+  "rounds_used": 2,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Jump Street": {
+  "slug": "jump_street",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Kojack": {
+  "slug": "kojack",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Lehman Brothers": {
+  "slug": "lehman_brothers",
+  "hands": 5000,
+  "rounds_used": 5,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Mohil'sPokerBot": {
+  "slug": "mohil_spokerbot",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "ND": {
+  "slug": "nd",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Peanut Cookies": {
+  "slug": "peanut_cookies",
+  "hands": 2000,
+  "rounds_used": 2,
+  "rule": "all",
+  "kind": "team"
+ },
+ "Phil AIvey": {
+  "slug": "phil_aivey",
+  "hands": 5000,
+  "rounds_used": 5,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Poke": {
+  "slug": "poke",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Pok\u00e9 Bot": {
+  "slug": "pok__bot",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Red": {
+  "slug": "red",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Resonance Qt": {
+  "slug": "resonance_qt",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "SARS": {
+  "slug": "sars",
+  "hands": 5000,
+  "rounds_used": 5,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "SmartBGerBot": {
+  "slug": "smartbgerbot",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "The Market Makers": {
+  "slug": "the_market_makers",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "Vlad": {
+  "slug": "vlad",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R19-R54",
+  "kind": "team"
+ },
+ "WBot": {
+  "slug": "wbot",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "YSL_TWIZZY": {
+  "slug": "ysl_twizzy",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "aydine": {
+  "slug": "aydine",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R19-R54",
+  "kind": "team"
+ },
+ "bigRoddy": {
+  "slug": "bigroddy",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "clanker": {
+  "slug": "clanker",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "ediz_slow": {
+  "slug": "ediz_slow",
+  "hands": 2000,
+  "rounds_used": 2,
+  "rule": "R19-R54",
+  "kind": "team"
+ },
+ "gamblerlove": {
+  "slug": "gamblerlove",
+  "hands": 7000,
+  "rounds_used": 7,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "kaiserbot": {
+  "slug": "kaiserbot",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "matcha mille cr\u00eapes cake": {
+  "slug": "matcha_mille_cr_pes_cake",
+  "hands": 4000,
+  "rounds_used": 4,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "munchlax": {
+  "slug": "munchlax",
+  "hands": 3000,
+  "rounds_used": 3,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "pokermon": {
+  "slug": "pokermon",
+  "hands": 2000,
+  "rounds_used": 2,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "supernut": {
+  "slug": "supernut",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "test": {
+  "slug": "test",
+  "hands": 6000,
+  "rounds_used": 6,
+  "rule": "R30-R54",
+  "kind": "team"
+ },
+ "field": {
+  "slug": "field",
+  "hands": 186000,
+  "rounds_used": 34,
+  "rule": "pooled: every profiled team's selected hands",
+  "kind": "pool"
+ },
+ "donor": {
+  "slug": "donor",
+  "hands": 17000,
+  "rounds_used": 14,
+  "rule": "pooled: teams with adj bb/100 < -10 and z < -2 over their selected hands",
+  "kind": "pool"
+ }
+}

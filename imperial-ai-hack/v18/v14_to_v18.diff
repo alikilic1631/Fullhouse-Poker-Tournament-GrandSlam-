@@ -1,0 +1,95 @@
+--- v14/bot.py	2026-11-15 01:43:46
++++ v18/bot.py	2026-11-15 09:50:49
+@@ -1,4 +1,4 @@
+-"""Pokerbot v14 (= v13.1 + v12 aggression switches B1/B2/B3/B5; v13.1 = v11.1 + data-checked exploits, review fixes applied, see V13_*; v11.1 = v10 + Sunday fixes from the 36-round diagnosis; see V11_* switches): EV maximiser with frequency-derived ranges (Hyperion-style four layers).
++"""Pokerbot v18 (= v14 + V18_* randomised out-of-plan aggression; v14 = = v13.1 + v12 aggression switches B1/B2/B3/B5; v13.1 = v11.1 + data-checked exploits, review fixes applied, see V13_*; v11.1 = v10 + Sunday fixes from the 36-round diagnosis; see V11_* switches): EV maximiser with frequency-derived ranges (Hyperion-style four layers).
+ 
+ Layer 1  decision engine  : explicit chip EV per candidate action (fold/check/call, bets at
+                             1/3, 2/3, pot, overbet, all-in), fixed opponent-independent formulas.
+@@ -304,6 +304,11 @@
+ V13_RIVER_BLSH = False  # OFF after review (no evidence at Table C): river first-bet air share in the range model by size: .34 / .26 / .20 (measured 35/27/11%)
+ V13_4BET_WIDE = True    # wider 4-bet bluffs vs measured 4-bet folders who 3-bet our opens often (FisherMen: 83%)
+ V13_LINE_BLUFF = True   # heads-up turn/river bluff caps by betting line (capped ranges fold 66-80%, OOP barrels 32-38%)
++V18_AIR_P = 0.25        # v18: share of hands where a cap-blocked air bluff (model EV above checking) is allowed anyway
++V18_THIN_P = 0.35       # v18: share of near-indifferent checked-to spots where we bet instead of checking
++V18_TOL = 0.04          # v18: ... near-indifferent = best bet EV within this share of the pot below checking
++V18_RAISE_P = 0.35      # v18: share of heads-up flop/turn small leads (<= 0.4 pot) we may bluff-raise (real logs: 61-77% fold)
++V18_PF_P = 0.25         # v18: share of single-open spots where a light 3-bet is allowed vs openers not measured to defend
+ V13_IP_RAISE = False    # OFF after review (gate never fires vs Table C): raise a measured raise-folder's led flop/turn bet in position (FisherMen folds 94% / 86%)
+ STREET_IDX = {"preflop": 0, "flop": 1, "turn": 2, "river": 3}
+ FOLD = {"action": "fold"}
+@@ -1204,6 +1209,11 @@
+         if tc > 0:
+             cap *= 0.6
+         u = self._u(si * 7 + s.get("raises_this_street", 0))
++        u2 = self._u(500 + si * 7 + s.get("raises_this_street", 0))     # v18: independent draw (out-of-plan aggression)
++        mixa_ = V18_AIR_P > 0 and tc <= 0 and nv <= 2 and u2 <= V18_AIR_P
++        small_ = (V18_RAISE_P > 0 and tc > 0 and nv == 1 and si < 3 and s.get("raises_this_street", 0) <= 1
++                  and tc <= 0.4 * max(1, pot - tc))
++        mixr_ = small_ and u2 <= V18_RAISE_P
+         gmin = 1.0
+         for v in vill:
+             if opp[v].g < gmin:
+@@ -1240,7 +1250,12 @@
+                 cr = 0.0
+                 if tc > 0:
+                     # we are raising: the bettor defends his bet often, everyone else folds
+-                    q = 1.0 - o.foldraise() if v == lr_ else 0.10
++                    if v != lr_:
++                        q = 0.10
++                    elif small_:
++                        q = 1.0 - o.f(o.br_f, o.br_n, 0.62, 6.0)    # v18: small leads fold 61-77% to a raise (real logs)
++                    else:
++                        q = 1.0 - o.foldraise()
+                     rsh = 0.20
+                 else:
+                     ub = UB[b] + (0.05 if si == 3 else 0.0)
+@@ -1333,7 +1348,8 @@
+             if inv >= 0.5 * mystack:
+                 ev -= commit_adj * (pot + 2 * inv) * p_call
+             # bluff-frequency cap: pure bluffs only a capped share of the time
+-            if tc > 0 and e_c < 0.5 and not ipr_ and not (si < 3 and uh < 0.5 and eq_all >= 0.33 and u <= 0.20):
++            if (tc > 0 and e_c < 0.5 and not ipr_ and not mixr_
++                    and not (si < 3 and uh < 0.5 and eq_all >= 0.33 and u <= 0.20)):
+                 continue
+             if weak or (e_c < (0.35 if si == 3 else 0.40) and eq_all < 0.45):
+                 if fr_ > (1.05 if (line_ in ("gaveup", "xthru_ip", "xthru_oop")
+@@ -1346,18 +1362,23 @@
+                 if tc > 0:
+                     if ipr_:
+                         c_ = max(c_, 0.5)   # v13: raise-folder (u <= 0.5 already checked)
++                    elif mixr_:
++                        c_ = 1.0            # v18: random bluff-raise of a small lead
+                     elif eq_all < 0.33 or u > 0.20:
+                         continue            # bluff-raise only as a rare semi-bluff with real equity
+                 elif si < 3 and eq_all >= 0.30:
+                     c_ = max(c_, 0.60)
+-                if u > c_:
+-                    continue
++                if u > c_ and not mixa_:
++                    continue                # v18: mixa_ lets a capped air bluff through (still needs EV > check)
+             if ev > best_ev:
+                 best_ev = ev
+                 best_x = x
+         margin = 0.03 * pot + (0.05 * pot if tc > 0 else 0.0)
+         if best_x and best_ev > ev_pass + margin:
+             return {"action": "raise", "amount": int(best_x)}
++        if (V18_THIN_P > 0 and tc <= 0 and nv <= 2 and best_x and best_ev >= ev_pass - V18_TOL * pot
++                and self._u(700 + si) <= V18_THIN_P):
++            return {"action": "raise", "amount": int(best_x)}     # v18: near-indifferent: bet instead of checking
+         return passive
+ 
+     def _weak_flop(self, hs, bd):
+@@ -1695,7 +1716,11 @@
+                             continue        # v11: 4-bet bluff only vs a measured 4-bet folder, ace/pair/blocker hands
+                     elif V12_LIGHT3 and not jam and nr == 1:
+                         seen2 = o.g >= 0.5 and kn >= 4 and kf >= 0.55 * kn
+-                        if not (seen2 and (blocker or i == 0 or j == 0 or i == j) and u <= 0.45):
++                        ok3_ = seen2 and (blocker or i == 0 or j == 0 or i == j) and u <= 0.45
++                        if (not ok3_ and V18_PF_P > 0 and not callers and (blocker or i == 0 or i == j)
++                                and (kn < 4 or kf >= 0.45 * kn) and self._u(600 + nr) <= V18_PF_P):
++                            ok3_ = True     # v18: occasional light 3-bet vs an opener not measured to defend
++                        if not ok3_:
+                             continue        # v12: light 3-bet vs a measured 3-bet folder (55%+)
+                     elif jam or nr >= 2 or not (seen and blocker and u <= 0.35):
+                         continue

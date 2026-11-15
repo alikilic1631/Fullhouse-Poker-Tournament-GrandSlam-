@@ -1,0 +1,21 @@
+# Sunday stage-1 table of Durahim 1453 (us), from https://poker.imperialaihack.com/pokerbots/api/public
+# fetched 2026-11-14T21:18:37; published 2026-11-14T20:46:02 ('Sunday buckets are out'): table 3 of 4, 8 seats, 36 rounds, top 2 advance.
+# Dealing was snake by Saturday seed over 4 tables (our seed 11 of 31). Uploads reopen 2026-11-15T09:00:00.
+# One opponent per line below, names exactly as in the logs (duel.py / timing.py --table-file read this file).
+# All 7 opponents have a profile (profiles/<slug>.json; hands = their hands at OUR Saturday tables):
+#   team                       seed Sat bb100  profile                     hands  data
+#   The Market Makers             3     +28.0  the_market_makers.json       4000  R30-R54
+#   FisherMen                     6     +20.6  fishermen.json               6000  R30-R54
+#   Claudebot                    14     +13.3  claudebot.json               3000  R30-R54
+#   Jump Street                  19      +5.7  jump_street.json             3000  R30-R54
+#   matcha mille crêpes cake     22      +3.3  matcha_mille_cr_pes_cake.json   4000  R30-R54
+#   85p                          27     -13.1  85p.json                     8000  R30-R54
+#   Joca                         30     -26.5  joca.json                    2000  R30-R54
+#   (us: Durahim 1453, seed 11, Saturday +13.9 bb/100)
+The Market Makers
+FisherMen
+Claudebot
+Jump Street
+matcha mille crêpes cake
+85p
+Joca
